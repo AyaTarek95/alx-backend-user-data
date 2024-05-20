@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
+"""Auth module"""
 from flask import request
 from typing import List, TypeVar
-
-"""Auth module"""
 
 
 class Auth:
@@ -12,7 +11,7 @@ class Auth:
         pass
 
     def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
-        """Does this path requires auth or not"""
+        """require_auth method"""
         if path is None or excluded_paths is None:
             return True
 
@@ -27,7 +26,7 @@ class Auth:
         return True
 
     def authorization_header(self, request=None) -> str:
-        """gets authorization data from the header"""
+        """authorization_header method"""
         if not request or 'authorization' not in request.headers:
             return None
 

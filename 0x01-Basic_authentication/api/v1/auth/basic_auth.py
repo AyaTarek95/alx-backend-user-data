@@ -2,6 +2,7 @@
 """BaseicAuth class module"""
 from .auth import Auth
 
+
 class BasicAuth(Auth):
     """BasicAuth class inherits from Auth class"""
     def __init__(self) -> None:

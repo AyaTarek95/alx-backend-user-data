@@ -7,4 +7,3 @@ class BasicAuth(Auth):
     def __init__(self) -> None:
         """contructor method"""
         pass
-
